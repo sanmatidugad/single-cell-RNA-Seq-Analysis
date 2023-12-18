@@ -9,6 +9,9 @@ createBarcodeRankPlot <- function(bcrank, all_cells, trim_cells, save_path) {
   
   # Subset the data
   subset_df <- subset(graph_data, graph_data$Tx > 0)
+
+  # Save the plot
+  png(save_path, width = 700, height = 500)
   
   # Create a scatter plot
   plot(subset_df$Rx, subset_df$Tx,
@@ -39,8 +42,7 @@ createBarcodeRankPlot <- function(bcrank, all_cells, trim_cells, save_path) {
   legend("bottomleft", c("Cells", "Background"),
          col = c("blue", "lightblue"), pch = c(16,16), cex = 1.2)
   title("Barcode Rank Plot")
-  # Save the plot
-  png(save_path, width = 700, height = 500)
+
   dev.off()
 }
 
