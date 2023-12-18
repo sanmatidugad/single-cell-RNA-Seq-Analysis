@@ -1,16 +1,8 @@
-# Introduction: Quality Assessment (QA) and Analysis of single cell RNA-Seq data
-
-# Link to Data: https://www.10xgenomics.com/resources/datasets/7-5-k-sorted-cells-from-human-invasive-ductal-carcinoma-3-v-3-1-3-1-standard-6-0-0 
-# Disease: 7.5k Sorted Cells from Human Invasive Ductal Carcinoma breat cancer
-# Chemistry Version - v3.1 ,
-# Software - Cell Ranger,
-# Species: Human Female Donor. Age 65, 
-
-# This code aims to reproduce and implement different single cell RNA-Seq analysis methods.
+# Quality Assessment (QA) and Analysis of single cell RNA-Seq data
 
 ## Import Data into R and filter out empty droplets.
 getwd()
-setwd("/home/data/1. DIY_scRNA_seq/scRNA_Seq_Github/")
+setwd("/home/data/scRNAseq-learning/")
 
 # Install Libraries
 library(tidyverse)
