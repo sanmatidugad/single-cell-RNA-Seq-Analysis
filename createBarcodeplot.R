@@ -25,7 +25,7 @@ createBarcodeRankPlot <- function(bcrank, all_cells, trim_cells, save_path) {
   text(max(subset_df$Rx) * 0.6, bcrank@metadata$knee + 10000, "Knee", col = "#FF0090", cex = 1)
   
   abline(h = bcrank@metadata$inflection, lty = 2, col = "#FF9966", lwd = 2)
-  text(max(subset_df$Rx) * 0.6 , stats@metadata$inflection + 500, "Inflection", col = "#FF8040", cex = 1)
+  text(max(subset_df$Rx) * 0.6 , bcrank@metadata$inflection + 500, "Inflection", col = "#FF8040", cex = 1)
   
   # Set log-scale axis labels
   axis(1, at = 10^seq(floor(log10(min(subset_df$Rx))),
