@@ -55,11 +55,11 @@ kb_stats = c(fromJSON(file = 'inspect.json'),
 tech = grep('10X(.*)', strsplit(kb_stats$call, '\\s')[[1]], value=T) 
 
 # make a nice/simple table that summarizes that stats
-seq_stats = data.frame(stat = c('Sequencing technology', 'Number of reads processed', '% reads pseudoaligned', # get sequencing/alignment stats 
-                                '% reads on whitelist'), 
-                       value = prettyNum(c(tech, kb_stats$n_processed, kb_stats$p_pseudoaligned, 
+run_stats = data.frame(stat = c('Sequencing technology', 'Number of reads processed', '% reads pseudoaligned', # get sequencing/alignment stats 
+                                '% reads uniquely pseudoaligned', '% reads on whitelist'), 
+                       value = prettyNum(c(tech, kb_stats$n_processed, kb_stats$p_pseudoaligned, kb_stats$p_unique, 
                                            round(kb_stats$percentageReadsOnWhitelist,2)), big.mark = ','))
-print(seq_stats)
+print(run_stats)
 
 # calculate cell stats and save to df
 p_cnts_in_cells = round((sum(filt_mtx)/sum(raw_mtx))*100, 2) 
