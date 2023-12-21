@@ -74,8 +74,32 @@ print(cell_stats)
 
 ## 4. Create seurat Object ----
 
+data_repo = 'counts_filtered'
+list.files(data_repo)
+expression_matrix = Read10X(data.dir = data_repo, gene.column = 2, cell.column = 1, 
+                             unique.features = TRUE, strip.suffix = FALSE)
+
+breast.7k.seurat = CreateSeuratObject(counts = expression_matrix,
+                                      min.cells = 3, min.features = 250) # To include genes that are expressed in at least 3 cells and cells having at least 350 genes.
 
 
+## 5. Normalize data and detect genes that are variable across all cells.
+breast.7k.seurat = NormalizeData(breast.7k.seurat,    # ?NormalizeData -- try other normalization methods
+                                 normalization.method = "LogNormalize", verbose = TRUE) %>%
+  FindVariableFeatures(selection.method = "vst", verbose = TRUE)    #?FindVariableFeatures -- try other selection methods. Also try scale.factor = 1e4
+
+  # Identify top 15 most variable genes
+top15.variable = head(VariableFeatures(breast.7k.seurat), 15)
+
+  # Plot these variable features and label them
+plot = VariableFeaturePlot(breast.7k.seurat, log = NULL) %>%
+  LabelPoints(points = top15.variable, repel = TRUE, xnudge = 0, ynudge = 0)
+plot
+
+## 6. Calculating % of mitochondrial reads, ribosomal reads, ERCC genes, housekeeping genes
+breast.7k.seurat[["percent.mito"]] = PercentageFeatureSet(breast.7k.seurat, pattern = "^MT-")
+breast.7k.seurat[["percent.ribo"]] = PercentageFeatureSet(breast.7k.seurat, pattern = "^RP[SL]")
+breast.7k.seurat[["percent.ercc"]] = PercentageFeatureSet(breast.7k.seurat, pattern = "^ERCC")
 
 
 
