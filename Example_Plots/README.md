@@ -13,5 +13,5 @@
 5. Summary of Gene Counts vs Cell Counts \
 ![alt text](https://github.com/sanmatidugad/single-cell-RNA-Seq-Analysis/blob/main/Example_Plots/Summary_cell_vs_genes.png)
 
-6. Filtering Cells - Violin Plot
+6. Filtering Cells - Violin Plot \
 ![alt text](https://github.com/sanmatidugad/single-cell-RNA-Seq-Analysis/blob/main/Example_Plots/Filtering_cells_Violin_Plot.png)
