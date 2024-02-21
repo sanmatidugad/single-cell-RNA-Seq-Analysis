@@ -1,10 +1,10 @@
 ## Single-Cell Analysis Learning Repository
 
 
-#### Link to Data: https://www.10xgenomics.com/datasets/1-k-heart-cells-from-an-e-18-mouse-v-3-chemistry-3-standard-3-0-0
-#### Dataset: 1k Heart Cells from an E18 mouse. Cells from whole heart.
-#### Chemistry Version - v3 , Sequenced on Illumina NovaSeq with approx 83,000 reads per cell
-#### Software - Cell Ranger, 28bp read1 (16bp Chromium barcode and 12bp UMI), 91bp read2 (transcript), and 8bp I7 sample barcode
+##### Link to Data: https://www.10xgenomics.com/datasets/1-k-heart-cells-from-an-e-18-mouse-v-3-chemistry-3-standard-3-0-0
+##### Dataset: 1k Heart Cells from an E18 mouse. Cells from whole heart.
+##### Chemistry Version - v3 , Sequenced on Illumina NovaSeq with approx 83,000 reads per cell
+##### Software - Cell Ranger, 28bp read1 (16bp Chromium barcode and 12bp UMI), 91bp read2 (transcript), and 8bp I7 sample barcode
 
 
 1. Barcode Rank Plot \
