@@ -75,6 +75,7 @@ ggplot(hc.1k.seurat@meta.data, aes(nCount_RNA, nFeature_RNA)) +
 # 1. Data points in the bottom LEFT hand quadrant = low genes and UMIs per cell. May represent poor quality cells.
 # 2. Data points in the bottom RIGHT hand quadrant = low genes but high UMIs per cell. These could be dying cells, but also could represent a population of a low complexity celltype (i.e red blood cells).
 
+# Visualizing Independent Component Analysis in different ways. (ICA) - Linear Dimension Reduction
 # Plot UMAP ----
 # it is standard practice to apply a linear transformation ('scaling') before PCA. For single cell data this includes:
 # 1. Shifting the expression of each gene, so that the mean expression across cells is 0
