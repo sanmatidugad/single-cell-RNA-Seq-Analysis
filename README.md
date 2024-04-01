@@ -20,3 +20,18 @@
 
 3. Violin Plot - Filtering Cells. \
 ![alt text](https://github.com/sanmatidugad/single-cell-RNA-Seq-Analysis/blob/main/Example_Plots/Filtering_cells_Violin_Plot.png)
+
+4. Variable Features Plot \
+![alt text](https://github.com/sanmatidugad/single-cell-RNA-Seq-Analysis/blob/main/Example_Plots/Variable_Features_Plot.png)
+  
+5. HeatMap \
+![alt text](https://github.com/sanmatidugad/single-cell-RNA-Seq-Analysis/blob/main/Example_Plots/HeatMap.png)
+
+6. UMAP \
+![alt text](https://github.com/sanmatidugad/single-cell-RNA-Seq-Analysis/blob/main/Example_Plots/umap.png)
+
+7. JackStraw Plot \
+![alt text](https://github.com/sanmatidugad/single-cell-RNA-Seq-Analysis/blob/main/Example_Plots/Jackstraw_plot.png)
+
+8. Elbow Plot \
+![alt text](https://github.com/sanmatidugad/single-cell-RNA-Seq-Analysis/blob/main/Example_Plots/Elbow_plot.png)
